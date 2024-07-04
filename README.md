@@ -1,4 +1,4 @@
-# ![MetadudesDAO Logo](https://img.icons8.com/color/96/000000/dao.png) MetadudesDAO
+# ![MetadudesDAO Logo](https://img.icons8.com/color/96/000000/dao.png](https://metadudes.org/assets/images/logo/logo_dark.png) MetadudesDAO
 
 Welcome to the MetadudesDAO project! This README provides a comprehensive overview of our mission, features, intriguing use cases leveraging Web3 technology, and how to get involved.
 
@@ -19,7 +19,7 @@ MetadudesDAO is a vibrant community of 1100 members dedicated to exploring and e
 ### Why the Project is Useful
 MetadudesDAO makes complex Web3 concepts accessible, fostering adoption through educational resources, community engagement, and exclusive onchain experiences. By simplifying blockchain technology, we empower users to participate in and benefit from the evolving digital economy.
 
-## ![Features](https://img.icons8.com/dusk/64/000000/features-list.png) Features
+## ![Features](https://img.icons8.com/dusk/64/000000/features-list.png](https://metadudes.org/assets/images/icon/friendly-03.svg) Features
 - **Web 3.0 and Metaverse Integration**: Engage in Play-to-Earn (P2E) games and decentralized finance (DeFi) activities, providing immersive onchain experiences that drive consumer adoption.
 - **Educational Resources**: Our easy-to-understand guides and analyses make blockchain technologies accessible to all, fostering a knowledgeable community.
 - **Community Spotlight**: Highlighting contributions and achievements within our community to inspire and motivate members.
