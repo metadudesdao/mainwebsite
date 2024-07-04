@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+
+@mixin  transition3 (){
+    -webkit-transition: all 0.3s ease;
+    -moz-transition   : all 0.3s ease;
+    -ms-transition    : all 0.3s ease;
+    -o-transition     : all 0.3s ease;
+    transition        : all 0.3s ease;
+}
+
+@mixin  transition5 (){
+    -webkit-transition: all 0.5s ease;
+    -moz-transition   : all 0.5s ease;
+    -ms-transition    : all 0.5s ease;
+    -o-transition     : all 0.5s ease;
+    transition        : all 0.5s ease;
+}
+
+@mixin  transitionY (){
+    -webkit-transform: translateY(-50%);
+    -ms-transform    : translateY(-50%);
+    -o-transform     : translateY(-50%);
+    transform        : translateY(-50%);
+}
+
+@mixin  transitionY3 (){
+    -webkit-transform : translateY(30px);
+    -ms-transform     : translateY(30px);
+    -o-transform      : translateY(30px);
+    transform         : translateY(30px);
+}
+
+@mixin  transitionY0 (){
+    -webkit-transform : translateY(0);
+    -ms-transform     : translateY(0);
+    -o-transform      : translateY(0);
+    transform         : translateY(0);
+}
+
+@mixin absolute-check {
+    bottom: 5px;
+    right: 18.5%;
+    position: absolute;
+}
+

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F1SF5DJNZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2F1SF5DJNZ');
+</script>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Metadudes | NodeMe</title>
+
+  <meta name="description" content="NodeMe - Validate Networks με τους Metadudes, Smart Pools μόνο για MD NFT Holders." />
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<meta property="og:image" content="https://metadudes.org/assets/images/meta.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content="Metadudes NFT Social DAO Community" />
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="assets/dist/style.css">
+
+    <!-- Reponsive -->
+    <link rel="stylesheet" type="text/css" href="assets/dist/responsive.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/icon/Favicon.png">
+
+    <style>
+       #connectButton {
+         display: flex;
+         align-items: center;
+         padding: 10px;
+         background-color: #7759F3; /* Change to your theme's background color */
+         border: none;
+         border-radius: 5px; /* Adjust as needed */
+         cursor: pointer;
+         font-size: 16px; /* Adjust as needed */
+       }
+
+       #connectButton img {
+         margin-right: 8px; /* Space between the image and the text */
+         width: 20px; /* Adjust as needed */
+         height: 20px; /* Adjust as needed */
+       }
+
+       #connectButton:focus {
+         outline: none;
+       }
+
+       .hidden {
+         display: none;
+       }
+
+       /* Modal styles */
+       .modal {
+         display: none;
+         position: fixed;
+         z-index: 1;
+         padding-top: 60px;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto;
+         background-color: rgb(0,0,0);
+         background-color: rgba(0,0,0,0.4);
+       }
+
+       .modal-content {
+         background-color: #473592;
+         margin: 15% auto;
+         padding: 76px;
+         border: 3px solid #888;
+         width: 80%;
+         text-align: center;
+         color: white !important;
+         box-shadow: 1px 1px 9px 5px #802299;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+       }
+
+       .close {
+         color: #aaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+       }
+
+       .close:hover,
+       .close:focus {
+         color: black;
+         text-decoration: none;
+         cursor: pointer;
+       }
+
+       .hidden-content {
+         display: none;
+       }
+
+       .mint-button {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #7759F3; /* Change to your theme's background color */
+         color: white;
+         text-align: center;
+         border: none;
+         border-radius: 5px;
+         text-decoration: none;
+         cursor: pointer;
+         font-size: 16px;
+         width: auto; /* Adjust the width to fit the button contents */
+         margin-top: 20px; /* Optional: Add some margin to the top for spacing */
+   }
+
+   .mint-button:hover {
+     background-color: #6843E0; /* Darker shade for hover effect */
+   }
+
+   .mint-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .mint-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .mint-container button:disabled {
+            background-color: #0e0a36;
+            cursor: not-allowed;
+            color: red;
+        }
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .quantity-container span {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #555;
+        }
+        .quantity-container input {
+            width: 50px;
+            text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            margin-left: -10px;
+        }
+        .quantity-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 11px 21px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .quantity-container button:hover {
+            background-color: #45a049;
+        }
+     </style>
+
+</head>
+
+<body class="body header-fixed">
+
+
+    <!-- preloade -->
+    <div class="preload preload-container">
+        <div class="preload-logo"></div>
+    </div>
+    <!-- /preload -->
+
+    <div id="wrapper" class="wrapper-style">
+        <div id="page" class="clearfix">
+            <header id="header_main" class="header_1 js-header">
+                <div class="themes-container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="site-header-inner">
+                                <div class="wrap-box flex">
+                                    <div id="site-logo" class="clearfix">
+                                        <div id="site-logo-inner">
+                                            <a href="index.html" rel="home" class="main-logo">
+                                                <img id="logo_header" src="assets/images/logo/logo_dark.png" alt="nft-gaming" width="92" height="47"
+                                                    data-retina="assets/images/logo/logo_dark@2x.png" data-width="133"
+                                                    data-height="56">
+                                            </a>
+                                        </div>
+                                    </div>
+                                     <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
+                                    <nav id="main-nav" class="main-nav">
+                                        <ul id="menu-primary-menu" class="menu">
+
+                                                <li class="menu-item">
+                                                <a href="https://docs.metadudes.org/metadudesdao" target="_blank"> Metadudes Docs</a>
+                                            </li>
+
+
+                                                <li class="menu-item">
+                                                <a href="https://discord.gg/metadudesgr" target="_blank"> Discord</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="apps.html">Explore Apps</a>
+
+                                            </li>
+
+
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="#">NFT Collections</a>
+                                               <ul class="sub-menu">
+
+                                                    <li class="menu-item"><a href="https://opensea.io/collection/metadudes-royal-key" target="_blank">OpenSea VIP NFT</a></li>
+
+                                                    <li class="menu-item"><a href="https://opensea.io/collection/metadudes-pro-key" target="_blank">OpenSea PRO NFT</a></li>
+                                                    <li class="menu-item"><a href="https://opensea.io/collection/metadudes-nodeme" target="_blank">OpenSea NODEME</a></li>
+
+
+                                                </ul>                                            </li>
+
+<li class="menu-item menu-item-has-children">
+                                                <a href="#">Partners</a>
+                                               <ul class="sub-menu">
+
+                                                    <li class="menu-item"><a href="https://www.bybit.com/en/sign-up?affiliate_id=57701&group_id=97495&group_type=1" target="_blank">Bybit Exchange</a></li>
+
+                                                    <li class="menu-item"><a href="https://tradehub.gr/" target="_blank">TradeHub Academy</a></li>
+
+<li class="menu-item"><a href="https://www.instagram.com/winnersnetwork.gr" target="_blank">Winners Network</a></li>
+
+<li class="menu-item"><a href="https://mobilo.gr/shop/product-category/iphones/" target="_blank">Mobilo EShop</a></li>
+
+<li class="menu-item"><a href="https://www.makeatshirt.gr/metadudes" target="_blank">Metadudes Merch</a></li>
+
+
+                                                </ul>                                            </li>
+
+
+
+
+
+
+                                        </ul>
+                                    </nav><!-- /#main-nav -->
+                                    <div class="flat-search-btn flex">
+                                        <div class="header-search flat-show-search" >
+
+                                            <div class="top-search">
+
+                                            </div>
+                                        </div>
+                                        <div class="sc-btn-top" id="site-header">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+       <div class="modal-content">
+         <span class="close">&times;</span>
+         <p>You do not own the required NFT to access this site in full.</p>
+         <p>You can get yours here:</p>
+         <button class="mint-button" onclick="window.open('https://metadudes.org/mint.html', '_blank')">Metadudes Mint Page</button>
+       </div>
+     </div>
+                <div class="mode_switcher">
+                  <button id="connectButton" class="align-items-center">
+    <img src="assets/images/icon/connect.png" alt="Connect">
+    <span id="buttonText">Connect</span>
+  </button>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+   <script>
+     const POLYGON_CHAIN_ID = '0x89'; // Polygon mainnet chain ID
+     const POLYGON_RPC_URL = 'https://polygon-rpc.com'; // Updated RPC URL
+
+     async function checkNftOwnership(account) {
+       const contractAddresses = [
+         "0x0ff1e228e6a95aa69c76bdcb366e3e6fe1a614d3",
+         "0x5164c0f7a1f2f68b266feeccca0ced8e6ed68166"
+       ];
+
+       const ABI = [
+         {
+           "constant": true,
+           "inputs": [{"name": "_owner", "type": "address"}],
+           "name": "balanceOf",
+           "outputs": [{"name": "", "type": "uint256"}],
+           "type": "function"
+         }
+       ];
+
+       let web3 = new Web3(new Web3.providers.HttpProvider(POLYGON_RPC_URL));
+       console.log('Checking NFT ownership on Polygon network...');
+
+       for (let address of contractAddresses) {
+         let contract = new web3.eth.Contract(ABI, address);
+         let balance = await contract.methods.balanceOf(account).call();
+         console.log(`Contract: ${address}, Balance: ${balance}`);
+         if (parseInt(balance) > 0) {
+           return true;
+         }
+       }
+       return false;
+     }
+
+     async function connectWallet() {
+       const buttonText = document.getElementById('buttonText');
+       const connectButton = document.getElementById('connectButton');
+       if (typeof window.ethereum !== 'undefined') {
+         try {
+           // Check if the wallet is connected to the Polygon network
+           const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+           if (chainId !== POLYGON_CHAIN_ID) {
+             await switchToPolygonNetwork();
+           }
+
+           const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+           const connectedAccount = accounts[0];
+           console.log('Connected account:', connectedAccount);
+
+           buttonText.textContent = 'Checking NFTs...';
+
+           const hasNFT = await checkNftOwnership(connectedAccount);
+           if (hasNFT) {
+             buttonText.textContent = 'Access Granted';
+             connectButton.style.backgroundColor = 'green';
+             localStorage.setItem('connectedAccount', connectedAccount);
+
+             document.querySelectorAll('.mainContent').forEach(element => {
+               console.log('Removing hidden-content class from mainContent');
+               element.classList.remove('hidden-content');
+             });
+
+             // Show NFT gated buttons
+             document.querySelectorAll('.sc-button').forEach(button => {
+               const font2Element = button.parentElement.querySelector('.font-2');
+               if (font2Element && font2Element.textContent.includes('NFT GATED ACCESS')) {
+                 button.style.display = 'inline-block';
+               }
+             });
+           } else {
+             buttonText.textContent = 'Access Limited';
+             connectButton.style.backgroundColor = 'red';
+             showModal();
+           }
+         } catch (error) {
+           console.error('Error connecting to MetaMask or fetching data:', error);
+           buttonText.textContent = 'Access Limited';
+           connectButton.style.backgroundColor = 'red';
+           showModal();
+         }
+       } else {
+         alert('MetaMask is not installed. Please install it from https://metamask.io/');
+         buttonText.textContent = 'Access Limited';
+         connectButton.style.backgroundColor = 'red';
+       }
+     }
+
+     async function switchToPolygonNetwork() {
+       try {
+         await window.ethereum.request({
+           method: 'wallet_switchEthereumChain',
+           params: [{ chainId: POLYGON_CHAIN_ID }],
+         });
+       } catch (switchError) {
+         // This error code indicates that the chain has not been added to MetaMask
+         if (switchError.code === 4902) {
+           try {
+             await window.ethereum.request({
+               method: 'wallet_addEthereumChain',
+               params: [
+                 {
+                   chainId: POLYGON_CHAIN_ID,
+                   chainName: 'Polygon Mainnet',
+                   rpcUrls: [POLYGON_RPC_URL],
+                   nativeCurrency: {
+                     name: 'MATIC',
+                     symbol: 'MATIC',
+                     decimals: 18,
+                   },
+                   blockExplorerUrls: ['https://polygonscan.com/'],
+                 },
+               ],
+             });
+           } catch (addError) {
+             console.error('Failed to add Polygon network to MetaMask:', addError);
+             throw addError; // Rethrow to trigger catch in connectWallet
+           }
+         } else {
+           console.error('Failed to switch to the Polygon network:', switchError);
+           throw switchError; // Rethrow to trigger catch in connectWallet
+         }
+       }
+     }
+
+     function showModal() {
+       var modal = document.getElementById("myModal");
+       var span = document.getElementsByClassName("close")[0];
+
+       modal.style.display = "block";
+
+       span.onclick = function() {
+         modal.style.display = "none";
+       }
+
+       window.onclick = function(event) {
+         if (event.target == modal) {
+           modal.style.display = "none";
+         }
+       }
+     }
+
+     window.addEventListener('load', async function() {
+       const connectedAccount = localStorage.getItem('connectedAccount');
+       const buttonText = document.getElementById('buttonText');
+       const connectButton = document.getElementById('connectButton');
+       if (connectedAccount) {
+         buttonText.textContent = 'Checking NFTs...';
+
+         try {
+           // Check if the wallet is connected to the Polygon network
+           const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+           if (chainId !== POLYGON_CHAIN_ID) {
+             await switchToPolygonNetwork();
+           }
+
+           const hasNFT = await checkNftOwnership(connectedAccount);
+           if (hasNFT) {
+             buttonText.textContent = 'Access Granted';
+             connectButton.style.backgroundColor = 'green';
+
+             document.querySelectorAll('.mainContent').forEach(element => {
+               console.log('Removing hidden-content class from mainContent');
+               element.classList.remove('hidden-content');
+             });
+
+             // Show NFT gated buttons
+             document.querySelectorAll('.sc-button').forEach(button => {
+               const font2Element = button.parentElement.querySelector('.font-2');
+               if (font2Element && font2Element.textContent.includes('NFT GATED ACCESS')) {
+                 button.style.display = 'inline-block';
+               }
+             });
+           } else {
+             buttonText.textContent = 'Access Limited';
+             connectButton.style.backgroundColor = 'red';
+             showModal();
+             localStorage.removeItem('connectedAccount');
+           }
+         } catch (error) {
+           console.error('Error checking NFT ownership on load:', error);
+           buttonText.textContent = 'Access Limited';
+           connectButton.style.backgroundColor = 'red';
+           showModal();
+           localStorage.removeItem('connectedAccount');
+         }
+       }
+     });
+
+     document.getElementById('connectButton').addEventListener('click', connectWallet);
+   </script>
+
+
+
+
+                    <a href="#" onclick="switchTheme()" class="light d-flex align-items-center">
+                        <img src="assets/images/icon/sun.png" alt="">
+                    </a>
+                    <a href="#" onclick="switchTheme()" class="dark d-flex align-items-center is_active">
+                        <img src="assets/images/icon/moon.png" alt="">
+                    </a>
+                </div>
+
+            </header>
+
+            <!-- title page -->
+            <section class="flat-title-page inner">
+                <img class="absolute mark-page" src="assets/images/mark/mark-header-04.png" alt="">
+                    <img class="absolute mark-page2 animate-rotate" src="assets/images/mark/mark-header-01.png" alt="">
+                    <img class="absolute mark-page3" src="assets/images/mark/mark-header-02.png" alt="">
+                    <img class="absolute mark-page4" src="assets/images/mark/mark-header-03.png" alt="">
+                    <img class="absolute mark-page5" src="assets/images/mark/mark-header-05.png" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="heading">NDM SmartPool<span class="text-color-3">.</span></h1>
+<br>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tf-section dark-style flat-auctions live-auctions">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrap-box explore-1 flex-one mb-30">
+                                <div class="seclect-box style-1 flex text-t font">
+<h2><b>NODEME PORTFOLIO </b></h2>
+                                </div>
+                                                            </div>
+                        </div>
+                        <div  class="col-lg-12 col-md-12">
+                            <div  class="swiper-container carousel-6 show-shadow">
+                                <div class="swiper-wrapper slider-style">
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/hychain.png" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">20 NODES</h6>
+                                                <h3><a href="#0">HYCHAIN NODES</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="https://coinmarketcap.com/currencies/hytopia/" class="sc-button btn-3" target="_blank"><span> $TOPIA</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/myria.png" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">7 NODES</h6>
+                                                <h3><a href="#0">MYRIA NODES</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="https://coinmarketcap.com/currencies/myria/" class="sc-button btn-3" target="_blank"><span> $MYRIA</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/bull.jpg" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">1 NODES</h6>
+                                                <h3><a href="#0">PLAYA3ULL
+NODES</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                       <a href="https://coinmarketcap.com/currencies/playa3ull/" class="sc-button btn-3" target="_blank"><span>$3ULL</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/aethir.png" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">6 NODES</h6>
+                                                <h3><a href="#0">AETHIR NODES</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+                                                                                                                <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="https://coinmarketcap.com/currencies/aethir/" class="sc-button btn-3" target="_blank"><span>$ATH</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/galaxy.jpg" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">5 NODES</h6>
+                                                <h3><a href="#0">GALAXIS NODES</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="https://coinmarketcap.com/currencies/galaxis/" target="_blank" class="sc-button btn-3"><span>$GLX</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/starmech.jpg" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">20 NODES</h6>
+                                                <h3><a href="#0">StarMech</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="#0" class="sc-button btn-3" target="_blank"><span>$ndSTA</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/kip.jpg" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">6 NODES</h6>
+                                                <h3><a href="#0">KIP Protocol</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="#0" data-toggle="modal" data-target="#popup_bid" class="sc-button btn-3"><span>SOON</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="sc-card-product sc-card-article blog-article">
+                                            <div class="card-media flat-img">
+                                                <a href="#0"><img src="assets/images/box-item/soon.gif" alt="Image"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="tags hidden-content mainContent">0 NODES</h6>
+                                                <h3><a href="#0">Coming Soon</a></h3>
+                                                <div class="meta-info mb-17">
+
+                                                </div>
+                                                <div class="meta-price flex-one">
+                                                    <div class="price flex">
+
+                                                        <div class="title-price"> Token Symbol</div>
+                                                    </div>
+                                                    <div class="button-place-bid">
+                                                        <a href="#0" data-toggle="modal" data-target="#popup_bid" class="sc-button btn-3"><span>HIGH</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                             <div class="swiper-button-next btn-slide-next active"></div>
+                                <div class="swiper-button-prev btn-slide-prev"></div>
+                                <div class="themesflat-pagination clearfix mt-2">
+
+  <h2><b>NODEME NFTs</b></h2>
+  <div class="hidden-content mainContent">
+  <div class="mint-container">
+      <button id="mintButton" class="sc-button btn-1" disabled>MINT NOW (PAUSED)</button>
+      <div class="quantity-container">
+          <span>Quantity:</span>
+          <button onclick="decrementQuantity()">-</button>
+          <input type="number" id="quantityInput" value="1" min="1">
+          <button onclick="incrementQuantity()">+</button><h3>Τιμή: 500$ USDT</h3>
+      </div>
+  </div>
+</div>
+  <div>
+
+  </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+<section id="nodeme">
+            <div class="tf-section flat-faq flat-create-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hidden-content wrap-faq mainContent">
+                                <div class="flat-tabs tab-create-item flat-form flex-one">
+                                    <ul class="menu-tab tab-title">
+                                        <li class="item-title active">
+                                            <span class="inner fw-6 fs-18">Τί είναι το - NodeMe SmartPool</span>
+                                        </li>
+<li class="item-title">
+                                            <a href="https://www.mediafire.com/file_premium/9eeyiakse0psh2d/nodes.pdf/file" target="_blank" class="inner fw-6 fs-18"><span>NodeMe - Project Portfolio (PDF.)</span></a>
+                                        </li>
+
+                                    </ul>
+                                    <div class="content-tab">
+                                        <div class="content-inner tab-content">
+                                            <div class="flat-accordion fl-faq-content">
+                                                <div class="flat-toggle">
+                                                    <h3 class="toggle-title fw-4 text-t"> Tokenize the possibilities με τους Metadudes<span class="btn-toggle"></span></h3>
+                                                    <div class="toggle-content section-desc">
+                                                        <p>Το NodeMe είναι ένα DApp των Metadudes που σκοπό έχει την απόκτηση Nodes από κοινού σε διάφορα projects και blockchains. Ο τρόπος διαχείρησης θα γίνεται με την προμήθεια ειδικών NFTs, τα οποία θα είναι περιορισμένα σε αριθμό και το κάθε ένα θα έχει έκθεση στο συνολικό smart pool του NodeMe. <br><br>
+
+Πρόσβαση στην εξόρυξή τους θα έχουν μόνο οι holders των Metadudes NFTs και στην αρχή θα μπορεί να γίνει “mint” συγκεκριμένος αριθμός NFTs από το τελικό σύνολο που θα δωθούν στην κυκλοφορία. Τα υπόλοιπα NodeMe NFTs θα ξεκλειδώνονται ανά τακτά χρονικά διαστήματα και θα προμηθεύονται με σειρά προτεραιότητας. Υπάρχει όριο στον συνολικό αριθμό NFTs που θα μπορούν να εξορυχθούν, όπως και θα υπάρχει όριο στα πόσα NFT θα μπορεί να εξορύξει ο κάθε holder ξεχωριστά. Φυσικά οι κάτοχοι του Metadudes VIP NFT θα μπορούν να αποκτήσουν μεγαλύτερη έκθεση στο NodeMe από τους κάτοχους του Metadudes PRO NFT. <br><br>
+
+Ο τρόπος λειτουργίας του NodeMe είναι ο εξής: Τα USDT που θα μαζευτούν από την εξόρυξη των NodeMe NFTs θα χρησιμοποιηθούν για την απόκτηση διαφόρων Nodes. Κάθε μήνα όλα τα tokens που θα δημιουργούνται από τα nodes, θα μετατρέπονται σε USDC και θα γίνεται ο διαμοιρασμός των rewards. με ένα ποσοστό να μένει για τη διαχείρηση των Nodes και τα έξοδα συντήρησης τους. Η διαχείρηση των nodes και ο διαμοιρασμός των rewards θα γίνεται από την ομάδα των Metadudes. <br><br>
+
+Ο τρόπος που θα μοιράζονται τα rewards είναι ο εξής: Μία φορά τον μήνα, θα μετατρέπονται όλα τα κερδισμένα tokens σε USDC, θα αφαιρείται ένα 10% για τη διαχείρηση και θα μένει πίσω ένα 10% για την απόκτηση επόμενων nodes. Το υπόλοιπο 80% θα μοιράζεται ανάλογα με την έκθεση που έχει το κάθε πορτοφόλι σε NodeMe NFTs.
+<br><br>
+Το έχουμε ονομάσει smart pool, διότι με κάθε εξόρυξη ενός NodeMe NFT, το κεφάλαιο που θα προστίθεται στο pool, θα βοηθάει στην απόκτηση περισσότερων Nodes. Ταυτόχρονα τα rewards από όλα τα Nodes θα μοιράζονται σε περισσότερα μέρη.  </p>
+                                                    </div>
+                                                </div>
+                                                                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+         <!-- Footer -->
+           <footer id="footer" class="clearfix page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="widget widget-logo">
+                            <div class="flat-box">
+                                <div class="logo-footer" id="logo-footer">
+                                    <a href="index.html">
+                                        <img id="logo_footer" src="assets/images/logo/logo_dark.png" alt="nft-gaming" width="92" height="47"
+                                        data-retina="assets/images/logo/logo_dark@2x.png" data-width="135"
+                                        data-height="56">
+                                    </a>
+                                </div>
+                                <p class="sub-widget-logo">NFT Social DAO<br>Multi Tokenized με τους Metadudes.</p>
+                            </div>
+                            <div class="widget-social style-1 mg-t32">
+                                <ul>
+                                   <li><a href="https://discord.gg/metadudesgr"><i class="fab fa-discord"></i></a></li>
+                                    <li><a href="https://x.com/metadudesdao"><i class="fab fa-twitter"></i></a></li>
+
+                                    <li><a href="https://www.instagram.com/metadudesdao/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@metadudes"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                                   </div>
+            </div>
+            </footer><!-- /#footer -->
+            <div class="widget-social-footer home2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12">
+                            <div class="widget widget-menu bottom">
+                                <ul class="flex link-style-1">
+                                    <li><a href="https://metadudes.org">Metadudes</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12">
+                            <div class="title-bottom font text-color-5">© Copyright 2023 - 2024 - Designed & Developed by <a href="https://metadudes.org" class="text-color-3">metadudes.org</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Bottom -->
+
+        </div>
+        <!-- /#page -->
+    </div>
+    <!-- /#wrapper -->
+
+
+    <!-- Modal Popup Bid -->
+    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body space-y-20 pd-40">
+                    <h2 class="text-center">New Nodes are Coming</h2>
+                    <p class="text-center">your bid <span class="price color-popup">(2.39ETH) </span> has been listing
+                        to our database</p>
+                    <a href="#" class="btn btn-primary"> Watch the listings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body space-y-20 pd-40">
+                    <h2>New Nodes are Coming!</h2>
+                    <br><br>
+                                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#"
+                        data-dismiss="modal" aria-label="Close"> Ok Thanks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a id="scroll-top"></a>
+
+    <!-- Javascript -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/count-down.js"></script>
+    <script src="assets/js/shortcodes.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/switchmode.js"></script>
+
+</body>
+
+</html>
