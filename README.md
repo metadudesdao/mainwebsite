@@ -53,19 +53,26 @@ MetaMask Setup: Ensure you have MetaMask installed and configured.
 
 NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
 
-## ![Sponsors and Partners] Sponsors and Partners
+## Sponsors and Partners
 
 ### We are proud to be sponsored and partnered with:
 
 Bybit Exchange: Bybit
+
 Vulcan Forge: Vulcan Forge
+
 Flux - Web3 Cloud: Flux
+
 Cryptopia: Cryptopia
+
 TradeHub Academy: TradeHub
+
 Mobilo EShop: Mobilo
+
 Winners Network: Private Telegram group with exclusive access for NFT holders.
 
-## [FAQ] FAQ
+
+## FAQ
 
 ### What the Project Does
 MetadudesDAO is a community-focused project aimed at simplifying and disseminating Web3, Metaverse, and DeFi technologies through educational resources, community engagement, and exclusive onchain experiences.
