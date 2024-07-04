@@ -49,11 +49,12 @@ Join our growing community and be a part of the Web3 revolution:
 ### How Users Can Get Started with the Project
 Follow these steps to get started with the MetadudesDAO project:
 
-MetaMask Setup: Ensure you have MetaMask installed and configured.
+##MetaMask Setup: Ensure you have MetaMask installed and configured.
 
-NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
+##NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
 
-Sponsors and Partners
+##Sponsors and Partners
+
 We are proud to be sponsored and partnered with:
 
 Bybit Exchange: Bybit
@@ -64,18 +65,19 @@ TradeHub Academy: TradeHub
 Mobilo EShop: Mobilo
 Winners Network: Private Telegram group with exclusive access for NFT holders.
 
-FAQ
-What the Project Does
+##FAQ
+
+###What the Project Does
 MetadudesDAO is a community-focused project aimed at simplifying and disseminating Web3, Metaverse, and DeFi technologies through educational resources, community engagement, and exclusive onchain experiences.
 
-Why the Project is Useful
+###Why the Project is Useful
 MetadudesDAO provides accessible resources and engaging experiences that encourage the adoption of Web3 technologies, helping users to understand and benefit from blockchain advancements.
 
-How Users Can Get Started
+###How Users Can Get Started
 Clone the repository, install dependencies, and set up MetaMask. Obtain a ROYAL NFT or PRO NFT for full access to the website's features.
 
-Where Users Can Get Help
+###Where Users Can Get Help
 Users can join our Discord server, visit our website, or follow our YouTube channel for support and community interaction.
 
-Who Maintains and Contributes to the Project
+###Who Maintains and Contributes to the Project
 The project is maintained by the MetadudesDAO community, with contributions from members and partners. Please refer to our Contributing Guide for more information on how to get involved.
