@@ -1,4 +1,4 @@
-# ![MetadudesDAO Logo](https://img.icons8.com/color/96/000000/dao.png](https://metadudes.org/assets/images/logo/logo_dark.png) MetadudesDAO
+# ![MetadudesDAO Logo](https://metadudes.org/assets/images/logo/logo_dark.png) MetadudesDAO
 
 Welcome to the MetadudesDAO project! This README provides a comprehensive overview of our mission, features, intriguing use cases leveraging Web3 technology, and how to get involved.
 
