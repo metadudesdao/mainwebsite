@@ -55,7 +55,7 @@ NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the web
 
 ## METADUDES DAO APPS
 
-(https://i.ibb.co/Sc1hJdJ/Fire-Shot-Capture-104-Metadudes-Apps-DApps-metadudes-org.png)
+![APPS](https://i.ibb.co/Sc1hJdJ/Fire-Shot-Capture-104-Metadudes-Apps-DApps-metadudes-org.png)
 
 ## Sponsors and Partners
 
