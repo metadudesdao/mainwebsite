@@ -8,7 +8,7 @@ Welcome to the MetadudesDAO project! This README provides a comprehensive overvi
 - [Roadmaps](#roadmaps)
 - [Community](#community)
 - [Getting Started](#getting-started)
-- [METADUDES DAO APPS](#apps)
+- [Metadudes DAO Apps](#apps)
 - [Sponsors and Partners](#sponsors-and-partners)
 - [FAQ](#faq)
 
