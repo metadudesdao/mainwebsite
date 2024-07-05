@@ -54,7 +54,7 @@ MetaMask Setup: Ensure you have MetaMask installed and configured.
 NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
 
 ## METADUDES DAO APPS
-(https://ibb.co/9hfFGVG)
+(https://i.ibb.co/9hfFGVG/Fire-Shot-Capture-104-Metadudes-Apps-DApps-metadudes-org.png)
 
 ## Sponsors and Partners
 
