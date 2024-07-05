@@ -53,23 +53,26 @@ MetaMask Setup: Ensure you have MetaMask installed and configured.
 
 NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
 
+## METADUDES DAO APPS
+(https://i.ibb.co/Sc1hJdJ/Fire-Shot-Capture-104-Metadudes-Apps-DApps-metadudes-org.png)
+
 ## Sponsors and Partners
 
 ### We are proud to be sponsored and partnered with:
 
-Bybit Exchange: Bybit
+Bybit Exchange
 
-Vulcan Forge: Vulcan Forge
+Vulcan Forge
 
-Flux - Web3 Cloud: Flux
+Flux - Web3 Cloud
 
-Cryptopia: Cryptopia
+Cryptopia
 
-TradeHub Academy: TradeHub
+TradeHub Academy
 
-Mobilo EShop: Mobilo
+Mobilo EShop
 
-Winners Network: Private Telegram group with exclusive access for NFT holders.
+Winners Network
 
 
 ## FAQ
@@ -88,4 +91,5 @@ Users can join our Discord server, visit our website, or follow our YouTube chan
 
 ### Who Maintains and Contributes to the Project
 The project is maintained by the MetadudesDAO community, with contributions from members and partners. Please refer to our Contributing Guide for more information on how to get involved.
+
 
