@@ -3,12 +3,12 @@
 Welcome to the MetadudesDAO project! This README provides a comprehensive overview of our mission, features, intriguing use cases leveraging Web3 technology, and how to get involved.
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [What the Project Does](#introduction)
 - [Features](#features)
 - [Roadmaps](#roadmaps)
 - [Community](#community)
 - [Getting Started](#getting-started)
-- [APPS](#apps)
+- [METADUDES DAO APPS](#apps)
 - [Sponsors and Partners](#sponsors-and-partners)
 - [FAQ](#faq)
 
@@ -44,7 +44,7 @@ Join our growing community and be a part of the Web3 revolution:
 - **Discord**: [Join our Discord](https://discord.gg/metadudesgr)
 - **YouTube Channel**: [MetadudesDAO on YouTube](https://www.youtube.com/@metadudes)
 
-## ![Getting Started] Getting Started
+## Getting Started
 
 ### How Users Can Get Started with the Project
 Follow these steps to get started with the MetadudesDAO project:
@@ -53,7 +53,7 @@ MetaMask Setup: Ensure you have MetaMask installed and configured.
 
 NFT Access: Obtain a ROYAL NFT or PRO NFT to access the full features of the website.
 
-## METADUDES DAO APPS
+## Metadudes DAO Apps
 
 ![APPS](https://i.ibb.co/Sc1hJdJ/Fire-Shot-Capture-104-Metadudes-Apps-DApps-metadudes-org.png)
 
