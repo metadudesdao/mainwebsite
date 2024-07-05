@@ -8,7 +8,7 @@ Welcome to the MetadudesDAO project! This README provides a comprehensive overvi
 - [Roadmaps](#roadmaps)
 - [Community](#community)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
+- [APPS](#apps)
 - [Sponsors and Partners](#sponsors-and-partners)
 - [FAQ](#faq)
 
@@ -44,7 +44,7 @@ Join our growing community and be a part of the Web3 revolution:
 - **Discord**: [Join our Discord](https://discord.gg/metadudesgr)
 - **YouTube Channel**: [MetadudesDAO on YouTube](https://www.youtube.com/@metadudes)
 
-## ![Getting Started](https://img.icons8.com/dusk/64/000000/start.png) Getting Started
+## ![Getting Started] Getting Started
 
 ### How Users Can Get Started with the Project
 Follow these steps to get started with the MetadudesDAO project:
